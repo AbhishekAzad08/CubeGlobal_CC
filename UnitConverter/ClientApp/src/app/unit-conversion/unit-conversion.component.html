@@ -1,0 +1,43 @@
+<div class="center">
+  <h1 id="tableLabel">Temperature Unit Converter</h1>
+</div>
+
+
+<div class="container">
+  <form [formGroup]="updateForm">
+    <div class="select">
+      <div class="lhs">
+        <label for="fromUnits">Choose From unit:  </label>
+
+        <select name="fromUnits" id="fromUnits" formControlName="fromUnits" [(ngModel)]="conversionReq.fromUnit">
+          <option value="Celcius">Celcius</option>
+          <option value="Fahrenheit">Fahrenheit</option>
+          <option value="Kelvin">Kelvin</option>
+        </select>
+      </div>
+      <div class="rhs">
+        <label for="toUnits">Choose To unit:  </label>
+
+        <select name="toUnits" id="toUnits" formControlName="toUnits" [(ngModel)]="conversionReq.toUnit">
+          <option value="Celcius">Celcius</option>
+          <option value="Fahrenheit">Fahrenheit</option>
+          <option value="Kelvin">Kelvin</option>
+        </select>
+      </div>
+    </div>
+    <div class="select">
+      <div>
+        <label for="inputTemperature">Input temperature: </label>
+        <input type="text" id="inputTemperature" name="inputTemperature" formControlName="inputTemperature" [(ngModel)]="conversionReq.temperature" />
+      </div>
+
+      <div>
+        <label for="toUnit">Output temperature: </label>
+        <input type="text" id="toUnit" name="toUnit" disabled formControlName="outputTemperature" [(ngModel)]="outputTemperature" />
+      </div>
+    </div>
+    <div class="center">
+      <button class="btn btn-primary" (click)="convert()">Convert</button>
+    </div>
+  </form>
+</div>
