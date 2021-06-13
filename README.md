@@ -8,7 +8,7 @@ Use the MS .Net Stack with Angular.
 Angular 8 template with ASP.Net Core application. 
 
 # Unit Testing 
-xUnit testing has been added for business layer methods.
+xUnit tests has been added for business layer methods.
 
 # Build and Run instructions
 Visual studio is required to debug/run the application. Node.js and python are required to build and run this project.
