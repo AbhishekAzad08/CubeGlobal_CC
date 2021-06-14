@@ -21,12 +21,7 @@ namespace UnitConverter.Controllers
             _serviceResolver = serviceResolver;
         }
 
-        [HttpPost]
-        //[Route("Convert")]
-        //[ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
-        //[ProducesResponseType(typeof(int), StatusCodes.Status400BadRequest)]
-        //[ProducesResponseType(typeof(int), StatusCodes.Status404NotFound)]
-        //[ProducesResponseType(typeof(int), StatusCodes.Status500InternalServerError)]
+        [HttpPost]        
         public double ConvertToAnotherUnit([FromBody]ConversionRequest request)
         {
             double returnVal = 0d;
