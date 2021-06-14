@@ -35,7 +35,7 @@ namespace UnitConverter.Controllers
             resolvedService = _serviceResolver((Units)Enum.Parse(typeof(Units), request.fromUnit.ToUpper()));
             returnVal = resolvedService.ConvertToOtherUnit(request.temperature, (Units)Enum.Parse(typeof(Units), request.toUnit.ToUpper()));
             
-            return returnVal;
+            return Math.Round(returnVal, 2);
         }
 
     }
